@@ -35,6 +35,8 @@ def predict():
     if request.method == 'POST':
         mov = str(request.form['mov'])
         y = recommender(mov)
+        movie_index = movies_data[movies_data['title']==mov].index[0]
+        search_movie = movies_data.iloc[movie_index]
         poster_index = poster[poster['id']==search_movie.id].index[0]
         poster_data = poster.iloc[poster_index]
         recommender_index=[]

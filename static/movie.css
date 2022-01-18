@@ -1,0 +1,232 @@
+body {
+  background-color: #242323;
+  margin: 1.5em;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1em;
+  margin-left: 0;
+}
+
+.logo span {
+  color: red;
+}
+
+.title-img {
+  position: absolute;
+  size: fixed;
+  top: 0;
+  left: 0;
+  background: url("../image/title.jpg");
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 10%;
+  width: 100%;
+  height: 50vh;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+section.title .title.img {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.title .title.img img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  width: 70%;
+}
+
+section.title h2 {
+  color: white;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.actors {
+  color: white;
+  text-align: center;
+}
+
+section.credit {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 1em;
+  margin-left: 0.7em;
+}
+
+section.credit img {
+  width: 10em;
+  margin-right: 1rem;
+}
+
+section.credit .feature.left p {
+  color: white;
+  text-align: center;
+}
+
+section.credit .feature.right {
+      grid-template-areas: "left right";
+}
+
+section.credit .feature.right img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+section.credit .feature.right p {
+  color: white;
+  text-align: center;
+}
+
+.directors {
+  color: white;
+  text-align: center;
+}
+
+section.director.img .director.img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.director.img .director.img img {
+  width: 10em;
+}
+
+section.director.img p {
+  color: white;
+  text-align: center;
+}
+
+.recommendation {
+  color: white;
+  text-align: center;
+}
+
+section.recommender {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 2em;
+}
+
+section.recommender img {
+  width: 10em;
+}
+
+section.recommender .feature.left p {
+  color: white;
+  text-align: center;
+}
+
+section.recommender .feature.right {
+      grid-template-areas: "left right";
+}
+
+section.recommender .feature.right img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+section.recommender .feature.right p {
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .title-img {
+    height: 75vh;
+  }
+  section.credit {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    vertical-align: top;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    gap: 1em;
+  }
+  section.credit img {
+    width: 12em;
+  }
+  section.credit p {
+    display: block;
+  }
+  section.director.img .director.img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.director.img .director.img img {
+    width: 12em;
+  }
+  section.recommender {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[4];
+        grid-template-columns: repeat(4, auto);
+    gap: 1em;
+  }
+  section.recommender img {
+    width: 13em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .title-img {
+    height: 100vh;
+  }
+  section.title .title.img {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.title .title.img img {
+    width: 30em;
+  }
+  section.title h2 {
+    color: white;
+    text-align: left;
+  }
+  .directors {
+    color: white;
+    -ms-flex-item-align: left;
+        -ms-grid-row-align: left;
+        align-self: left;
+  }
+  section.director.img .director.img {
+    display: block;
+  }
+  section.director.img .director.img img {
+    width: 20%;
+  }
+  section.director.img p {
+    color: white;
+    text-align: left;
+  }
+  section.recommender img {
+    width: 15em;
+  }
+}
+/*# sourceMappingURL=movie.css.map */

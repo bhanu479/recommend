@@ -14,10 +14,11 @@ def recommender(movie):
     similarity = create_similarity(movies)
     movie_index = movies[movies['title']==movie].index[0]
     distances = similarity[movie_index]
-    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:6]
-    x = []
+    movies_list = sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:11]
+    x = pd.DataFrame()
     for i in movies_list:
-        x.append(movies.iloc[i[0]].title)
+        y = {'id':movies.iloc[i[0]].id,'movies':movies.iloc[i[0]].title}
+        x = x.append(y,ignore_index=True)
     return x
 
 app = Flask(__name__)

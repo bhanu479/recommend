@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-movies_data = pd.read_csv("main_data.csv")
+movies_data = pd.read_csv("movies_data.csv")
 movies = pd.read_csv("movies_tags.csv")
 poster = pd.read_csv("poster.csv")
 def create_similarity(data):
